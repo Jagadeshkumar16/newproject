@@ -1,0 +1,133 @@
+ <div class="home">
+  <div class="row">
+    
+  <mat-toolbar color="warn">
+    <div class="row ">
+      <div class="col-md-1"><span class="home" (click)="planetHome()">Planet Home</span></div>
+    </div>
+    
+  
+      <div class="col-md-2 "><button mat-button class="mx-2" (click)="reproduction()">Reproduce</button></div>
+      <div class="col-md-2"><button mat-button (click)="feed()">Organism Actions</button></div>
+      <div class="col-md-2"><button mat-button (click)="simulate()">Simulation</button></div>
+      <div class="col-md-2"><button mat-button (click)="enviornment()">Enviornment</button></div>
+      <div class="col-md-2"><button mat-button (click)="population()">Population</button></div>
+      <div class="col-md-2"><button class="logout" mat-button (click)="logout()">LogOut</button></div>
+    
+  </mat-toolbar>
+  </div>
+<ng-template [ngIf]="displayName==='home'">
+  <div class="container-fluid d-flex align-items-center justify-content-center custom-container">
+    <div class="col-md-8">
+      <mat-card class="custom-card">
+        
+  
+        <mat-card-header>
+          <mat-card-title></mat-card-title>
+        </mat-card-header>
+
+       
+        <div class="row bcard">
+          <div class="row">
+          <div class="col-md-6">
+            
+            <button mat-button class="hmbutton" (click)="historyPlanet()"><img src="https://c.tenor.com/5HYgrPbwQwIAAAAd/tenor.gif"> History Of Planet</button>
+          </div>
+          <div class="col-md-6">
+            <button mat-button class="hmbutton" (click)="humanevolution()"> <img src="https://2.bp.blogspot.com/-qX6bz8MK_nc/WkqJKE16COI/AAAAAAAABgY/5WlUDNOwn8gzHJP37Ppy9g9t0zXqyM8bgCLcBGAs/s1600/evolution-next.gif">Human Evolution</button>
+          </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-6">
+              
+              <button mat-button class="hmbutton" (click)="genetics()"><img src="https://bladdercancer.net/wp-content/uploads/2017/11/723.gif"> Genetic changes</button>
+            </div>
+            <div class="col-md-6">
+              <button mat-button class="hmbutton" (click)="organismevolution()"> <img src="https://media.giphy.com/media/ujuo6uFJZOUtW/giphy.gif">Organism Evolution</button>
+            </div>
+            </div>
+            <div class="row mt-5">
+              <div class="col-md-6">
+                
+                <button mat-button class="hmbutton" (click)="life()"><img src="https://cdn.centerforinquiry.org/wp-content/uploads/sites/31/2015/06/22165037/Screen-Shot-2019-01-30-at-11.17.24-AM.png">Life Cycle</button>
+              </div>
+              <div class="col-md-6">
+                <button mat-button class="hmbutton" (click)="climate()">
+                  
+                    <img src="https://cdn.dribbble.com/users/28455/screenshots/1389791/weather.gif" class="mr-2" alt="Weather">
+                    Weather
+                  
+                </button>
+              </div>
+              
+              </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+
+</ng-template>
+<ng-template [ngIf]="displayName==='genetic'">
+  <div class="container-fluid d-flex align-items-center justify-content-center custom-container">
+    <div class="col-md-8">
+      <iframe width="auto" height="auto" src="https://www.youtube.com/embed/jUHokSPkzT8?si=r2iBPT4Quxh6mOLi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+   </div>   
+    </ng-template>
+<ng-template [ngIf]="displayName==='history'">
+  <div class="container-fluid d-flex align-items-center justify-content-center custom-container">
+    <div class="col-md-8">
+      <iframe width="auto" height="auto" src="https://www.youtube.com/embed/LinWJsangs4?si=s6uyfQZPWsc1lfwr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+   </div>   
+  </ng-template>
+<ng-template [ngIf]="displayName==='humanevolve'">
+  <div class="container-fluid d-flex align-items-center justify-content-center custom-container">
+    <div class="col-md-8">
+      <iframe width="auto" height="auto" src="https://www.youtube.com/embed/2W5hOJaFjxU?si=D2ZtBQkj7Lh9OCL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>   
+    </ng-template>
+<ng-template [ngIf]="displayName==='organismevolve'">
+  <div class="container-fluid d-flex align-items-center justify-content-center custom-container">
+    <div class="col-md-8">
+      <iframe width="auto" height="auto" src="https://www.youtube.com/embed/unfQmeWe7WE?si=UyQ9nhsuTijHV_uQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+     </div>
+   </div>   
+</ng-template>
+<ng-template [ngIf]="displayName==='lifeCycle'">
+  <div class="container-fluid d-flex align-items-center justify-content-center custom-container">
+    <div class="col-md-8">
+      <iframe width="auto" height="auto" src="https://www.youtube.com/embed/HpXaiG8L28s?si=-ZogUMIx0QMHHGir" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>     </div>
+   </div>   
+</ng-template>
+<ng-template [ngIf]="displayName==='weather'">
+  <div class="container-fluid d-flex align-items-center justify-content-center custom-container">
+    <div class="col-md-8">
+      <iframe width="auto" height="auto" src="https://www.youtube.com/embed/hY3sa68hpM8?si=ou-qiQpjvr1PyipC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+      </div>
+    </div>   
+</ng-template>
+<ng-template [ngIf]="displayName==='food'">
+<app-feeding></app-feeding>
+</ng-template>
+<ng-template [ngIf]="displayName==='simulate'">
+<app-simulation></app-simulation>
+</ng-template>
+
+<ng-template [ngIf]="displayName==='reproduce'">
+  <div class="custom-container">
+  <app-reproduction></app-reproduction>
+</div>
+  </ng-template>
+  <ng-template [ngIf]="displayName==='env'">
+    <app-enviornment></app-enviornment>
+    </ng-template>
+    <ng-template [ngIf]="displayName==='Population'">
+      <app-generation></app-generation>
+    </ng-template>
+</div>
+
+
+
+ 

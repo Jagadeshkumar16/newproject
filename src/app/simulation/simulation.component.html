@@ -1,0 +1,58 @@
+<ng-template [ngIf]="displayName==='simulation'">
+<div class="container-fluid d-flex align-items-center justify-content-center custom-container ">
+    <div class="col-md-8">
+        <mat-card class="custom-card">
+            <mat-card-header class="mx-auto">
+                <mat-card-title>Simulation</mat-card-title>
+            </mat-card-header>
+            <div class="row mx-5 mt-5">
+            <div class="row ">
+                <div class="col-md-2 mx-auto justify-content-center">
+                    
+                    <button mat-button  color="warn" class="commonbtn" (click)="start()"> Start</button>
+                </div>
+                <div class="col-md-2 mx-auto justify-content-center">
+                    
+                    <button mat-button color="warn" class="commonbtn" (click)="stopInterval()"> Stop</button>
+                </div>
+            </div>
+            <div class="row  mt-5">
+                <ul>
+                    <li><P>Note:<span>For Every 10 secs one Organism is eating another Organism</span></P></li>
+                </ul>
+            </div>
+            <div class="row align-items-cneter justify-content-center">
+                <div class="col-md-8 font-weight-bold fs-6">Human Remaining : {{humanCount}}</div>
+                <div class="col-md-4 font-weight-bold fs-6">Cells Remaining : {{cellCount}}</div>
+                <div class="col-md-8 font-weight-bold fs-6">Eagles Remaining: {{egaleCount}}</div>
+                <div class="col-md-4 font-weight-bold fs-6">Pigeon Remaining: {{pigeonCount}}</div>
+                <div class="col-md-8 font-weight-bold fs-6">Lion Remaining: {{lionCount}}</div>
+                <div class="col-md-4 font-weight-bold fs-6">Giraffe Remaining : {{giraffeCount}}</div>
+                <!-- <div class="col-md-8">Giraffe eating Cell</div> -->
+                <!-- <div class="col-md-4">Cells Remaining</div> -->
+            </div>
+            <div class="row  mt-5 align-items-cneter justify-content-center">
+                <div class="col-md-8 font-weight-bold fs-6">Human Eats Cell</div>
+                <div class="col-md-4 font-weight-bold fs-6">Lion Eats Human and Giraffee</div>
+                <div class="col-md-8 font-weight-bold fs-6">Eagles Eats Pigoen</div>
+                <div class="col-md-4 font-weight-bold fs-6">Pigeon Eats cell</div>
+                <div class="col-md-8 font-weight-bold fs-6">Giraffe Eats cell</div>
+                <div class="col-md-4 font-weight-bold fs-6"></div>
+                <!-- <div class="col-md-8">Giraffe eating Cell</div> -->
+                <!-- <div class="col-md-4">Cells Remaining</div> -->
+            </div>
+        </div>
+       </mat-card>
+    </div>
+  </div>
+</ng-template>
+<ng-template [ngIf]="displayName==='graph'">
+    <div class="container-fluid d-flex align-items-center justify-content-center custom-container ">
+        <div class="col-md-8">
+            <mat-card class="custom-card">
+                <div id="container"></div>
+            </mat-card>
+        </div>
+    </div>    
+
+</ng-template>
